@@ -24,3 +24,29 @@ Commands required as input:
   - ARRAY command - will print the queue as an array.
   - EXIT command - exits the input.
   - If an existing command is sent, ERROR will be printed on the screen ":" and the name of the command sent.
+
+## Through the run:
+### Option 1: Without using makefile:
+Open terminal 2 (or more if you want more than one client) in Linux routed to the folder where the files are located.
+2. In terminal 1: g ++ server.cpp -pthread -o s
+3. In Terminal 1: ./s
+4. In terminal 2: g ++ client.cpp -o c1
+5. In Terminal 2: ./c1
+6. In terminal 3 or higher: g ++ client.cpp -o c2
+7. In terminal 3 or more: ./ c2
+
+### Option 2: Using makefile:
+Open terminal 2 in Linux routed to the folder where the files are located.
+2. make all
+In terminal 1: ./runS (runs the server-)
+In Terminal 2: ./runC (running the client)
+
+### Run the test.cpp test file:
+1. Open a terminal in Linux routed to the folder where the files are located.
+2. g ++ test.cpp -lpthread -o t
+3. ./t
+
+### Running bonus_ex10.cpp:
+4. Open a terminal in Linux routed to the folder where the files are located.
+5. g ++ bonus_ex10.cpp -o b
+6. ./b
